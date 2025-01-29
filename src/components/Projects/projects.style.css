@@ -38,10 +38,15 @@ img {
   cursor: pointer;
 }
 
+.logo-name {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 1400px) {
   .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
   }
 
   body {
@@ -60,6 +65,13 @@ img {
   }
 }
 
+@media (max-width: 990px) {
+  .projects-info p {
+    font-size: 20px;
+    width: 600px;
+  }
+}
+
 @media (max-width: 790px) {
   .projects-container {
     display: grid;
@@ -72,5 +84,19 @@ img {
 
   .projects-wrapper {
     min-height: 80vh;
+  }
+}
+
+@media (max-width: 560px) {
+  .projects-info p {
+    font-size: 20px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .projects-info p {
+    font-size: 20px;
+    width: 300px;
   }
 }

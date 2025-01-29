@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <div className="projects-wrapper">
       <div className="projects-info">
-        <h1>Portfolio</h1>
+        <h1 className="logo-name">Portfolio</h1>
         <p>
           Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis
           vehicula enim, non aliquam risus.

@@ -60,6 +60,10 @@ textarea {
   border-radius: 8px;
 }
 
+.contact-name {
+  margin-bottom: 20px;
+}
+
 .contact-info {
   margin-bottom: 40px;
   width: 750px;
@@ -82,11 +86,22 @@ textarea {
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 550px) {
   .contact-form {
     width: 350px;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
   }
   .contact-info {
+    margin-top: 30px;
     width: 350px;
+  }
+  .txt-input {
+    width: 300px;
+  }
+  textarea {
+    width: 300px;
   }
 }

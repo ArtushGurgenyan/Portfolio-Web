@@ -5,9 +5,8 @@ import "./header.style.css";
 import { useState, useEffect } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 
-const Header = () => {
+const Header = ({ isMenuOpen, toggleMenu }) => {
   const [theme, setTheme] = useState("light");
-  const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -24,10 +23,6 @@ const Header = () => {
     localStorage.setItem("theme", newTheme);
   }
 
-  function handleClick() {
-    setClicked(!clicked);
-  }
-
   return (
     <>
       <div className="container">
@@ -36,9 +31,9 @@ const Header = () => {
           <h1>ortfolio</h1>
         </div>
         <div className="routes">
-          <CiMenuBurger className="menu-icon" onClick={handleClick} />
+          <CiMenuBurger className="menu-icon" onClick={toggleMenu} />
           <div className="menu">
-            <Link to={APP_ROUTE_PATH.ABOUT}>About</Link>
+            <Link to="">About</Link>
             <Link to={APP_ROUTE_PATH.PROJECTS}>Projects</Link>
             <Link to={APP_ROUTE_PATH.CONTACT}>Contact us</Link>
             <button className="mode" onClick={changeTheme}>
@@ -49,10 +44,10 @@ const Header = () => {
       </div>
       <div
         className="resposive-menu"
-        style={{ display: clicked ? "block" : "none" }}
+        style={{ display: isMenuOpen ? "block" : "none" }}
       >
         <div className="menu-wrapper">
-          <Link to={APP_ROUTE_PATH.ABOUT}>About</Link>
+          <Link to="">About</Link>
           <Link to={APP_ROUTE_PATH.PROJECTS}>Projects</Link>
           <Link to={APP_ROUTE_PATH.CONTACT}>Contact us</Link>
           <button className="mode" onClick={changeTheme}>
